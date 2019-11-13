@@ -275,15 +275,15 @@ function tallyUpDonations(runners)
  * counter() // should return 2
  * etc
 */
-function counterMaker() {
-  // BROKEN CODE STARTS
-  const count = 0;
-  function counter() {
-    ++count
+function counterMaker()
+{
+  let count = -1;
+  return this.counter = () =>
+  {
+    count += 1;
+    return count;
   }
-  // BROKEN CODE ENDS
 }
-
 /**
  * ### Challenge `counterMakerWithLimit`
  * 
